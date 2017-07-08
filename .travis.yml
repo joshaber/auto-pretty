@@ -1,8 +1,14 @@
+language: node_js
+node_js:
+  - "7"
+
 install:
   - npm install
 
 script:
   - npm run prettify
+  - git config --global user.email "you@example.com"
+  - git config --global user.name "Your Name"
   - git add .
   - git commit -m "Prettier"
   - git push
