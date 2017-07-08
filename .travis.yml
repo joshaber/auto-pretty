@@ -1,0 +1,8 @@
+install:
+  - npm install
+
+script:
+  - npm run prettify
+  - git add .
+  - git commit -m "Prettier"
+  - git push
