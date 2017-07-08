@@ -11,9 +11,10 @@ install:
   - npm install
 
 script:
+  - openssl aes-256-cbc -K $encrypted_16a3d0995174_key -iv $encrypted_16a3d0995174_iv -in deploy_rsa.enc -out ~\/.ssh/deploy_rsa -d
   - npm run prettify
-  - git config --global user.email "you@example.com"
-  - git config --global user.name "Your Name"
+  - git config user.email "joshaber@gmail.com"
+  - git config user.name "auto-pretty"
   - git add .
   - git commit -m "Prettier"
   - git push
