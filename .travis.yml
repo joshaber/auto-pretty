@@ -20,4 +20,4 @@ script:
   - git config user.name "auto-pretty"
   - git add .
   - git commit -m "Prettier"
-  - git push
+  - git push git@github.com:joshaber/auto-pretty.git
