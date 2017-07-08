@@ -1,7 +1,7 @@
 #!/bin/sh
 
 if [ -z "$TRAVIS_PULL_REQUEST" ]; then
-    echo "Not a pull request"
+    echo "Not a pull request, exiting."
     exit 0
 fi
 
