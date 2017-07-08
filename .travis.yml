@@ -17,12 +17,12 @@ script:
   - ssh-add /tmp/deploy_rsa
   - git config user.email "joshaber@gmail.com"
   - git config user.name "auto-pretty"
-  - git checkout $TRAVIS_PULL_REQUEST_BRANCH
+  - git checkout -b prettier
   - npm run prettify
   - git status
   - git add .
   - git commit -m "[ci skip] Prettier"
   - git status
   - git remote add deploy git@github.com:joshaber/auto-pretty.git
-  - git push deploy
+  - git push deploy $TRAVIS_PULL_REQUEST_BRANCH
   - git status
