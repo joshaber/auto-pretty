@@ -20,7 +20,7 @@ script:
   - npm run prettify
   - git status
   - git add .
-  - git commit -m "Prettier"
+  - git commit -m "[ci skip] Prettier"
   - git status
   - git remote add deploy git@github.com:joshaber/auto-pretty.git
   - git push deploy
