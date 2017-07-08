@@ -1,8 +1,14 @@
+notifications:
+  email:
+    on_success: never
+    on_failure: never
+
+language: node_js
+node_js:
+  - "7"
+
 install:
   - npm install
 
 script:
-  - npm run prettify
-  - git add .
-  - git commit -m "Prettier"
-  - git push
+  - ./make-it-pretty.sh
