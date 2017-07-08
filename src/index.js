@@ -1,3 +1,1 @@
-function main () {
-
-}
+function main() {}
