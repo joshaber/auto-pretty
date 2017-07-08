@@ -15,9 +15,13 @@ script:
   - eval "$(ssh-agent -s)"
   - chmod 600 /tmp/deploy_rsa
   - ssh-add /tmp/deploy_rsa
-  - npm run prettify
   - git config user.email "joshaber@gmail.com"
   - git config user.name "auto-pretty"
+  - npm run prettify
+  - git status
   - git add .
   - git commit -m "Prettier"
-  - git push git@github.com:joshaber/auto-pretty.git $TRAVIS_BRANCH
+  - git status
+  - git remote add deploy git@github.com:joshaber/auto-pretty.git
+  - git push deploy
+  - git status
